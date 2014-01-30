@@ -1,4 +1,4 @@
 get '/' do
-  # Look in app/views/index.erb
+  @posts = Post.get_list
   erb :index
 end

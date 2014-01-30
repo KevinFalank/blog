@@ -1,0 +1,10 @@
+<div class="container">
+
+  <h1><%= @post.title %></h1>
+  <h3>by: <%= @post.author %></h3>
+  <p><%= @post.body %></p>
+  <h5>tags: <%= @tags %></h5>
+
+  <a href="/post/edit/<%= @post.id %>">Edit</a>
+  <a href="/">list</a>
+</div>

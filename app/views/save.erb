@@ -1,0 +1,18 @@
+<div class="container">
+  <form action="/post/save" method="post" id="frm_post">
+    <label for="title">Title:</label>
+    <input id="title" name="post[title]" value="<%= @post.title %>" ><br/>
+    <label for="author">Author:</label>
+    <input id="author" name="post[author]" value="<%= @post.author %>" ><br/>
+    <label for="image">Image url:</label>
+    <input id="image" name="post[image]" value="<%= @post.image %>" ><br/>
+    <label for="tags">Tags:</label>
+    <input id="tags" name="post[tags]" value="<%= @tags %>" ><br/>
+    <label for="body">Body:</label>
+    <textarea id="body" name="post[body]" form="frm_post" ><%= @post.body %></textarea><br/>
+    <input type="hidden" id="id" name="post[id]" value="<%= @post.id %>"/>
+    <input id="save" type="submit" value="Save" /><br/>
+  </form>
+
+
+  <a href="<%= @url %>">Cancel</a>
