@@ -9,7 +9,7 @@ class Tag < ActiveRecord::Base
   end
 
   def self.posts_with_tag(id)
-    Tag.posts.all.to_a
+    Tag.find(id).posts.all.to_a
   end
 
 end

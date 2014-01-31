@@ -2,7 +2,7 @@
   <h1>Tags</h1>
   <ol>
     <% @tags.each do |tag| %>
-      <li><%= tag.name %></a></li>
+      <li><a href="/tag/<%= tag.id %>"><%= tag.name %></a></li>
     <% end %>
   </ol>
 </div>

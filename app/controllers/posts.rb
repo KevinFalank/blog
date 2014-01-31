@@ -21,5 +21,10 @@ post "/post/save" do
   @post_data = params[:post]
   # return @post_data["title"]
   Post.save_post(@post_data)
-  redirect "/post/" + @post_data["id"].to_s
+  redirect "/"
+end
+
+get "/post/delete/:post_id" do
+  Post.delete_post(params[:post_id])
+  redirect "/"
 end
